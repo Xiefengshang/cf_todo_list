@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="login-screen">
+            <h1>欢迎回来</h1>
+            <p>请输入您的邮箱地址以加载待办事项</p>
+            <input type="email" id="email-input" placeholder="例如：hello@example.com">
+            <button id="login-btn">登录 / 注册</button>
+        </div>
+
+        <div id="todo-app" class="hidden">
+            <header>
+                <div class="user-info">
+                    <span id="user-email-display"></span>
+                    <button id="logout-btn">退出</button>
+                </div>
+                <h1>我的待办事项</h1>
+                <form id="new-todo-form">
+                    <input type="text" id="new-todo-input" placeholder="需要做什么？" autocomplete="off">
+                    <button type="submit">+</button>
+                </form>
+            </header>
+            <main>
+                <ul id="todo-list"></ul>
+            </main>
+            <footer>
+                <p>由 <a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a> 强力驱动</p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
